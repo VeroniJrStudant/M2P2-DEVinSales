@@ -3,9 +3,10 @@ using DevInSales.Context;
 
 
 using DevInSales.Seeds;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,28 @@ builder.Services.AddSwaggerGen(opt =>
 });
 
 builder.Services.AddDbContext<SqlContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("ServerConnection")));
-builder.Services.AddControllersWithViews().AddNewtonsoftJson(); 
+builder.Services.AddControllersWithViews().AddNewtonsoftJson();
+
+var secret = builder.Configuration.GetValue<string>("TokenConfigurations: SecretJwtKey");
+var key = Encoding.UTF8.GetBytes("");
+
+builder.Services.AddAuthentication(o =>
+{
+    o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+});
+.AddJwtBearer(o => 
+{
+    o.RequireHttpsMetadata = false;
+    o.SaveToken = true;
+    o => TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateSogningKey = new SymetricSecurityKey(key),
+        ValidadeIssuer = false,
+        ValidadeAudience = false
+    };
+});
+
 
 var app = builder.Build();
 
@@ -35,6 +57,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
