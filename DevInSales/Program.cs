@@ -1,10 +1,7 @@
 using DevInSales.Context;
-
-
-
-using DevInSales.Seeds;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
 
@@ -26,22 +23,22 @@ builder.Services.AddDbContext<SqlContext>(options=>options.UseSqlServer(builder.
 builder.Services.AddControllersWithViews().AddNewtonsoftJson();
 
 var secret = builder.Configuration.GetValue<string>("TokenConfigurations: SecretJwtKey");
-var key = Encoding.UTF8.GetBytes("");
+var key = Encoding.ASCII.GetBytes("2sdgf1szdfghsçsdfsdfgb4sd453g7s86f5g4sdfgljkbhhjtjdgjflkjbhkujydgfhxkjbkugkgcjzfçoikhsa");
 
 builder.Services.AddAuthentication(o =>
 {
     o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-});
-.AddJwtBearer(o => 
-{
+})
+.AddJwtBearer(o => { 
     o.RequireHttpsMetadata = false;
     o.SaveToken = true;
-    o => TokenValidationParameters = new TokenValidationParameters
+    o.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateSogningKey = new SymetricSecurityKey(key),
-        ValidadeIssuer = false,
-        ValidadeAudience = false
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false
     };
 });
 
