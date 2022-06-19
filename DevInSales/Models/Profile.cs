@@ -8,17 +8,14 @@ public class Profile
     public int Id { get; set; }
     [Column("name")]
     public string Name{ get; set; }
-    [Column("email")]
-    public int Email { get; set; }
 
     public Profile()
     {
     }
 
-    public Profile(int id, string name, string email)
+    public Profile(int id, string name)
     {
         Id = id;
         Name = name;
-        Email = email;
     }
 }

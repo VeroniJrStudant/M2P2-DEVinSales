@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevInSales.Controllers
 {
-    [Route("api/auth")]
     [ApiController]
-    public class AuthController : Controller
+    [Route("api/auth")]
+    public class AuthController : ControllerBase
     {
         private readonly SqlContext _context;
         public AuthController(SqlContext context)

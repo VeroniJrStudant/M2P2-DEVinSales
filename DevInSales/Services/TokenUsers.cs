@@ -12,7 +12,7 @@ namespace DevInSales.Services
         {
             var tokenHandler = new JwtSecurityTokenHandler();
 
-            var secret = "2sdgf1szdfghsçsdfsdfgb4sd453g7s86f5g4sdfgljkbhhjtjdgjflkjbhkujydgfhxkjbkugkgcjzfçoikhsa";
+            var secret = HelperConfiguration.config.GetSection("TokenConfigurations:SecretJwtKey").Value;
 
             var key = Encoding.ASCII.GetBytes(secret);
 
@@ -21,7 +21,7 @@ namespace DevInSales.Services
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("UseId", user.Id.ToString()),
-                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.Name, user.Name),
                     new Claim(ClaimTypes.Role, user.Profile.Name)
                 }),
 

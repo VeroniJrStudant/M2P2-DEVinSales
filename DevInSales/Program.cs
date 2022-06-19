@@ -1,4 +1,5 @@
 using DevInSales.Context;
+using DevInSales.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -19,11 +20,14 @@ builder.Services.AddSwaggerGen(opt =>
     opt.IncludeXmlComments(xmlPath);
 });
 
+//builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+
 builder.Services.AddDbContext<SqlContext>(options=>options.UseSqlServer(builder.Configuration.GetConnectionString("ServerConnection")));
 builder.Services.AddControllersWithViews().AddNewtonsoftJson();
 
-var secret = builder.Configuration.GetValue<string>("TokenConfigurations: SecretJwtKey");
-var key = Encoding.ASCII.GetBytes("2sdgf1szdfghsçsdfsdfgb4sd453g7s86f5g4sdfgljkbhhjtjdgjflkjbhkujydgfhxkjbkugkgcjzfçoikhsa");
+HelperConfiguration.Initialize(builder.Configuration);
+var secret = builder.Configuration.GetValue<string>("TokenConfigurations:SecretJwtKey");
+var key = Encoding.ASCII.GetBytes(secret);
 
 builder.Services.AddAuthentication(o =>
 {
@@ -60,3 +64,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }
