@@ -1,7 +1,7 @@
 using DevInSales.Services;
 using NUnit.Framework;
 
-namespace DevInSales
+namespace DEVinSalesTest
 {
     public class Tests
     {

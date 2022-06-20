@@ -21,7 +21,7 @@ namespace DevInSales.Controllers
         public async Task<ActionResult> AuthenticateAsync([FromBody] UserLoginDto dto)
         {
             var user = await _context.User.Include(a=> a.Profile)
-                .FirstOrDefaultAsync(a=> a.Email == dto.Email && a.Password ==dto.Password);
+                .FirstOrDefaultAsync(a=> a.Id == dto.Id && a.Password ==dto.Password);
             if (user == null) return BadRequest(new { Message = "Email ou senha inválido." });
             var token = TokenUsers.GenerateToken(user);
 

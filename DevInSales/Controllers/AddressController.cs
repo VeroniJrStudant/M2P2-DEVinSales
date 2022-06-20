@@ -10,7 +10,7 @@ using DevInSales.Context;
 using DevInSales.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using DevInSales.DTOs;
-
+using DevInSales.Services;
 
 namespace DevInSales.Controllers
 {
@@ -19,10 +19,16 @@ namespace DevInSales.Controllers
     public class AddressController : ControllerBase
     {
         private readonly SqlContext _context;
+        private AddressRepository context;
 
         public AddressController(SqlContext context)
         {
             _context = context;
+        }
+
+        public AddressController(AddressRepository context)
+        {
+            this.context = context;
         }
 
         // GET: api/Addresse
