@@ -1,23 +1,31 @@
-using DevInSales.Services;
-using NUnit.Framework;
+﻿using Microsoft.VisualStudio.TestPlatform.TestHost;
+using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using DevInSales.Context;
+using DEVinSalesTest.Context;
 
-namespace DEVinSalesTest
+namespace UnitTest
 {
-    public class Tests
+    public class DevInSalesFactory : WebApplicationFactory<Program>
     {
-        [SetUp]
-        public void Setup()
+        protected override IHost CreateHost(IHostBuilder builder)
         {
-        }
+            var root = new InMemoryDatabaseRoot();
 
-        [Test]
-        [TestCase(1,1,2)]
-        [TestCase(2,2,4)]
-        [TestCase(-3,14,11)]
-        public void DeveSomarCorretamente(int x, int y, int expected)
-        {
-            var result = CalculatorService.Soma(x, y);
-            Assert.AreEqual(expected, result);
+
+            builder.ConfigureServices(services => {
+                services.AddScoped(sp => {
+                    return new DbContextOptionsBuilder<SqlContext>()
+                        .UseInMemoryDatabase("DEVinSales", root)
+                        .UseApplicationServiceProvider(sp)
+                        .Options;
+                });
+            });
+
+            return base.CreateHost(builder);
         }
     }
 }

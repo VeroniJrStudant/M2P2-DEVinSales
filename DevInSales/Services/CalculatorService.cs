@@ -1,4 +1,4 @@
-﻿namespace DevInSales.Services
+﻿namespace DEVinSalesTest.Services
 {
     public class CalculatorService
     {
@@ -7,9 +7,14 @@
             return  x + y;
         }
 
-        public static object Subtrair(int x, int y)
+        public static int Subtrair(int x, int y)
         {
-            return x -y;
+            return x - y;
+        }
+
+        public static int Multiplicar(int x, int y)
+        {
+            return x * y;
         }
 
 

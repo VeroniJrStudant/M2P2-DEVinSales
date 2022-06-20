@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace DevInSales.Models
+namespace DEVinSalesTest.Models
 {
     public class Order
     {

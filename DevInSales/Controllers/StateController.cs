@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DevInSales.Context;
-using DevInSales.Models;
-using DevInSales.DTOs;
+using DEVinSalesTest.Context;
+using DEVinSalesTest.Models;
+using DEVinSalesTest.DTOs;
 
-namespace DevInSales.Controllers
+namespace DEVinSalesTest.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -1,4 +1,4 @@
-﻿namespace DevInSales.Enums
+﻿namespace DEVinSalesTest.Enums
 {
     public enum StatusEnum
     {

@@ -1,4 +1,4 @@
-﻿namespace DevInSales.DTOs
+﻿namespace DEVinSalesTest.DTOs
 {
     public class CityStateDTO
     {

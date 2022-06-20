@@ -1,7 +1,7 @@
-﻿using DevInSales.Models;
-using DevInSales.Seeds;
+﻿using DEVinSalesTest.Models;
+using DEVinSalesTest.Seeds;
 
-namespace DevInSales.Seeds
+namespace DEVinSalesTest.Seeds
 {
   public static class CitySeed
   {

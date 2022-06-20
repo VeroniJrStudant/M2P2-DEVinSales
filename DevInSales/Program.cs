@@ -1,5 +1,5 @@
-using DevInSales.Context;
-using DevInSales.Services;
+using DEVinSalesTest.Context;
+using DEVinSalesTest.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

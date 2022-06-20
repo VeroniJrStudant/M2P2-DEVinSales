@@ -1,7 +1,7 @@
-﻿using DevInSales.Models;
+﻿using DEVinSalesTest.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace DevInSales.DTOs
+namespace DEVinSalesTest.DTOs
 {
     public class OrderProductCreateDTO
     {

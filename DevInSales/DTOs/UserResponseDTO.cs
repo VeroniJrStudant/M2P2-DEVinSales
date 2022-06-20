@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DevInSales.DTOs
+namespace DEVinSalesTest.DTOs
 {
     /// <summary>
     /// DTO que representa as informações de um usuário

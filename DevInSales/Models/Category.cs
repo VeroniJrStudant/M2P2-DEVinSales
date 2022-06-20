@@ -1,6 +1,6 @@
-﻿using DevInSales.Extensions;
+﻿using DEVinSalesTest.Extensions;
 
-namespace DevInSales.Models
+namespace DEVinSalesTest.Models
 {
     public class Category
     {

@@ -1,9 +1,9 @@
-﻿using DevInSales.Context;
-using DevInSales.Models;
+﻿using DEVinSalesTest.Context;
+using DEVinSalesTest.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DevInSales.Controllers
+namespace DEVinSalesTest.Controllers
 {
     [Route("api/delivery")]
     [ApiController]

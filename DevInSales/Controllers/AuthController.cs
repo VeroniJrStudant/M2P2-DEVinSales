@@ -1,11 +1,11 @@
-﻿using DevInSales.Context;
-using DevInSales.DTOs;
-using DevInSales.Services;
+﻿using DEVinSalesTest.Context;
+using DEVinSalesTest.DTOs;
+using DEVinSalesTest.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace DevInSales.Controllers
+namespace DEVinSalesTest.Controllers
 {
     [ApiController]
     [Route("api/auth")]

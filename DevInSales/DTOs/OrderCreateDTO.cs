@@ -1,6 +1,6 @@
-﻿using DevInSales.Models;
+﻿using DEVinSalesTest.Models;
 
-namespace DevInSales.DTOs
+namespace DEVinSalesTest.DTOs
 {
     public class OrderCreateDTO
     {

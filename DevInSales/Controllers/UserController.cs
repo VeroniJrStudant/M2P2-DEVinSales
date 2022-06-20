@@ -1,12 +1,12 @@
-﻿using DevInSales.DTOs;
-using DevInSales.Models;
-using DevInSales.Context;
+﻿using DEVinSalesTest.DTOs;
+using DEVinSalesTest.Models;
+using DEVinSalesTest.Context;
 using Microsoft.AspNetCore.Mvc;
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 
-namespace DevInSales.Controllers
+namespace DEVinSalesTest.Controllers
 {
     [Route("api/user")]
     [ApiController]

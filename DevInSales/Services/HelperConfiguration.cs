@@ -1,4 +1,4 @@
-﻿namespace DevInSales.Services
+﻿namespace DEVinSalesTest.Services
 {
     public class HelperConfiguration
     {
