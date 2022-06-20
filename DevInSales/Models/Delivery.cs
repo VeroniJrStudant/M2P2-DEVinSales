@@ -1,6 +1,6 @@
-﻿using DEVinSalesTest.Enums;
+﻿using DevInSales.Enums;
 
-namespace DEVinSalesTest.Models
+namespace DevInSales.Models
 {
     public class Delivery
     {

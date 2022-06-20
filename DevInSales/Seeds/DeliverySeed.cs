@@ -1,4 +1,4 @@
-﻿namespace DEVinSalesTest.Seeds
+﻿namespace DevInSales.Seeds
 {
     public class DeliverySeed
     {

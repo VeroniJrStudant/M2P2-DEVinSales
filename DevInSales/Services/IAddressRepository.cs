@@ -1,8 +1,9 @@
-﻿using DEVinSalesTest.DTOs;
-using DEVinSalesTest.Models;
+﻿using DevInSales.DTOs;
+using DevInSales.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DevInSales.api.Services
+namespace DevInSales.Services
+
 {
     public interface IAddressRepository
     {

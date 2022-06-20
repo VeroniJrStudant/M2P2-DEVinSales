@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DEVinSalesTest.Models
+namespace DevInSales.Models
 {
     public class State
 

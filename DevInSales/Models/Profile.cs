@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DEVinSalesTest.Models;
+namespace DevInSales.Models;
 
 public class Profile
 {

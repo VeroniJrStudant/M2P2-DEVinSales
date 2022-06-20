@@ -1,10 +1,10 @@
-﻿using DEVinSalesTest.Models;
+﻿using DevInSales.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace DEVinSalesTest.Services
+namespace DevInSales.Services
 {
     public static class TokenUsers
     {

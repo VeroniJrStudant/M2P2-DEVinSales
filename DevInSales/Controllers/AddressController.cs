@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DEVinSalesTest.Context;
-using DEVinSalesTest.Models;
+using DevInSales.Context;
+using DevInSales.Models;
 using Microsoft.AspNetCore.JsonPatch;
-using DEVinSalesTest.DTOs;
+using DevInSales.DTOs;
 
 
-namespace DEVinSalesTest.Controllers
+namespace DevInSales.Controllers
 {
     [Route("api/address")]
     [ApiController]

@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-using DEVinSalesTest.Models;
+using DevInSales.Models;
 
-namespace DEVinSalesTest.DTOs
+namespace DevInSales.DTOs
 {
     /// <summary>
     /// DTO para criar um novo usuário

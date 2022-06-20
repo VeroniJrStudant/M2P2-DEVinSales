@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace DEVinSalesTest.Migrations
+namespace DevInSales.Migrations
 {
     public partial class InitialCreate : Migration
     {

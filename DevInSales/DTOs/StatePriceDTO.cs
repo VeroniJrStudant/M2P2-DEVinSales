@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DEVinSalesTest.DTOs
+namespace DevInSales.DTOs
 {
     public class StatePriceDTO
     {

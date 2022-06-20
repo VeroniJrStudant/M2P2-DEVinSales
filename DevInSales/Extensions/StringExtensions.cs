@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 
-namespace DEVinSalesTest.Extensions
+namespace DevInSales.Extensions
 {
     public static class StringExtensions
     {

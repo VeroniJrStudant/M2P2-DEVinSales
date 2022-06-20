@@ -1,11 +1,11 @@
-﻿using DEVinSalesTest.Context;
-using DEVinSalesTest.DTOs;
-using DEVinSalesTest.Models;
+﻿using DevInSales.Context;
+using DevInSales.DTOs;
+using DevInSales.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
-namespace DEVinSalesTest.Controllers
+namespace DevInSales.Controllers
 {
     [Route("api/order")]
     [ApiController]

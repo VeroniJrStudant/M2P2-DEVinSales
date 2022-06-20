@@ -1,8 +1,8 @@
-using DEVinSalesTest.Models;
-using DEVinSalesTest.Seeds;
+using DevInSales.Models;
+using DevInSales.Seeds;
 using Microsoft.EntityFrameworkCore;
 
-namespace DEVinSalesTest.Context;
+namespace DevInSales.Context;
 
 public class SqlContext : DbContext
 {

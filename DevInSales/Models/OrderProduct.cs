@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DEVinSalesTest.Models;
+namespace DevInSales.Models;
 
 
 public class OrderProduct

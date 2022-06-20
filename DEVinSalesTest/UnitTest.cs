@@ -1,7 +1,7 @@
-using DEVinSalesTest.Services;
+using DevInSales.Services;
 using NUnit.Framework;
 
-namespace DEVinSalesTest
+namespace DevInSales
 {
     public class Tests
     {
@@ -11,13 +11,13 @@ namespace DEVinSalesTest
         }
 
         [Test]
-        [TestCase(1,1,2)]
-        [TestCase(2,2,4)]
-        [TestCase(-3,14,11)]
+        [TestCase(1, 1, 2)]
+        [TestCase(2, 2, 4)]
+        [TestCase(-3, 14, 11)]
         public void DeveSomarCorretamente(int x, int y, int expected)
         {
             var result = CalculatorService.Soma(x, y);
-            Assert.AreEqual(expected, result);            
+            Assert.AreEqual(expected, result);
         }
 
         [Test]

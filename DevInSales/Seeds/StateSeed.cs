@@ -1,6 +1,6 @@
-﻿using DEVinSalesTest.Models;
+﻿using DevInSales.Models;
 
-namespace DEVinSalesTest.Seeds
+namespace DevInSales.Seeds
 {
     public static class StateSeed
     {

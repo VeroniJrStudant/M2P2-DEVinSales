@@ -1,14 +1,14 @@
-using DEVinSalesTest.Context;
-using DEVinSalesTest.DTOs;
-using DEVinSalesTest.Models;
-using DEVinSalesTest.Context;
+using DevInSales.Context;
+using DevInSales.DTOs;
+using DevInSales.Models;
+using DevInSales.Context;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace DEVinSalesTest.Controllers
+namespace DevInSales.Controllers
 {
     [Route("api/product")]
     [ApiController]

@@ -1,4 +1,4 @@
-﻿using DEVinSalesTest.Models;
+﻿using DevInSales.Models;
 
 public class ProductSeed
 {
